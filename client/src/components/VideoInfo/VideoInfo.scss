@@ -1,0 +1,133 @@
+@import "../../partials/variables";
+@import "../../partials/globals";
+@import "../../partials/mixins";
+
+.video-info {
+  width: 90vw;
+  margin: 3.2rem auto;
+
+  @include tablet {
+    width: 93vw;
+    max-width: 72rem;
+    margin-left: 3.125vw;
+    margin-right: 0;
+  }
+
+  @include desktop {
+    max-width: 71.2rem;
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+
+  &__title {
+    @include h1-mobile;
+    margin-bottom: 1.6rem;
+
+    @include tablet {
+      margin-bottom: 2.4rem;
+      @include header-tablet;
+    }
+
+    @include desktop {
+      padding-right: 2rem;
+    }
+  }
+
+  .vid-subtitles {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $tert-merc;
+      padding-bottom: 2.4rem;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+
+    .title-div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3.2rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      &__channel {
+        @include subtitle-mobile;
+        margin-right: 0.8rem;
+      }
+
+      &__date {
+        @include comment-text;
+        color: $sec-silver;
+      }
+    }
+
+    .icon-div {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $tert-merc;
+      padding-bottom: 2.4rem;
+
+      @include tablet {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      &__view-icon,
+      &__like-icon {
+        margin-right: 0.8rem;
+      }
+
+      &__views,
+      &__likes {
+        margin-right: 2rem;
+        @include comment-text;
+      }
+    }
+  }
+  .vid-description {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    @include tablet {
+      padding-top: 0;
+      width: 70%;
+      padding-bottom: 6rem;
+    }
+
+    &__description {
+      @include h4-mobile;
+
+      @include tablet {
+        @include comment-text;
+      }
+    }
+
+    .like-btn {
+      outline: none;
+      transition: 0.2s;
+      width: 7rem;
+      background-color: $pri-bright-blue;
+      height: 4.3rem;
+      padding: 0.5rem 0;
+      @include button-text;
+      color: $white;
+      font-family: "Avenir";
+      border: none;
+      border-radius: 4px;
+      margin-top: 3vw;
+
+      &:hover {
+        background-color: rgb(253, 157, 146);
+        cursor: pointer;
+        color: $pri-dark;
+      }
+    }
+  }
+}
+
+.comments-counter {
+  @include subtitle-mobile;
+}

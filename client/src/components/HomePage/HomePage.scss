@@ -1,0 +1,24 @@
+@import "../../partials/mixins";
+@import "../../partials/variables";
+
+.desktopFlexing {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    max-width: 108rem;
+    margin: 0 auto;
+  }
+}
+
+.comments-wrap {
+  @include desktop {
+    width: 71.2rem;
+    border-right: 1px solid $tert-merc;
+  }
+}
+
+.loading {
+  margin: 0 auto;
+  color: $pri-dark;
+  font-size: 4rem;
+}

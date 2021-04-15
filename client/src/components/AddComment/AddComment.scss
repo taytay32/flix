@@ -1,0 +1,134 @@
+@import "../../partials/variables";
+@import "../../partials/globals";
+@import "../../partials/mixins";
+
+.comments {
+  width: 90vw;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 93vw;
+    max-width: 65rem;
+    margin: 0 0;
+    margin-left: 3.125vw;
+  }
+
+  @include desktop {
+    max-width: 71.2rem;
+    margin-left: 0;
+  }
+
+  &__title {
+    @include h5;
+    width: 68vw;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+
+    @include tablet {
+      margin-left: 6.4rem;
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    @include desktop {
+      margin-left: 7.2rem;
+    }
+  }
+
+  .addCommentContainer {
+    display: flex;
+    border-bottom: 1px solid $tert-merc;
+
+    @include tablet {
+      width: 93vw;
+      max-width: 71.3rem;
+    }
+
+    @include desktop {
+      max-width: 71.2rem;
+    }
+
+    .imgcontainer {
+      width: 4.8rem;
+      height: 4.8rem;
+
+      &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .comment-form {
+      margin-left: auto;
+
+      @include tablet {
+        margin-left: 1.6rem;
+        display: flex;
+      }
+
+      @include desktop {
+        width: 60rem;
+      }
+
+      &__textarea {
+        transition: 0.2s;
+        height: 32vw;
+        margin-bottom: 1.6rem;
+        @include textarea-text;
+        display: block;
+        margin-left: auto;
+
+        &:focus {
+          border: 2px solid $pri-bright-blue;
+        }
+
+        @include tablet {
+          width: 57vw;
+          max-width: 44rem;
+          height: 4.8rem;
+          margin-right: 1.6rem;
+        }
+        @include desktop {
+          width: 43.6rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.form-btn {
+  width: 68vw;
+  margin-left: auto;
+  margin-bottom: 3.2rem;
+
+  @include tablet {
+    width: 16rem;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
+
+  &__btn {
+    outline: none;
+    transition: 0.2s;
+    width: 100%;
+    background-color: $pri-bright-blue;
+    height: 4.8rem;
+    padding: 1rem 0;
+    @include button-text;
+    color: $white;
+    font-family: "Avenir";
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgb(253, 157, 146);
+      cursor: pointer;
+      color: $pri-dark;
+    }
+  }
+}

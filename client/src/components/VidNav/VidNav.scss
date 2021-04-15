@@ -1,0 +1,82 @@
+@import "../../partials/variables";
+@import "../../partials/globals";
+@import "../../partials/mixins";
+
+.nextVidCont {
+  width: 90vw;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 34.4rem;
+    margin: 0 0;
+    margin-left: 3.2rem;
+  }
+
+  @include desktop {
+    width: 34.4rem;
+    padding-left: 2.4rem;
+    margin-left: 0;
+  }
+
+  .nextVidTitle {
+    @include h5;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  .nextVid {
+    margin-bottom: 2.4rem;
+    display: flex;
+
+    // @include tablet {
+    //   width: 100%;
+    // }
+
+    // @include desktop {
+    //   width: 100%;
+    // }
+
+    .nextVidImgWrap {
+    }
+
+    &__img {
+      height: 7rem;
+      width: 12rem;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .nextVidText {
+      width: 45vw;
+      margin-left: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include tablet {
+        width: 20rem;
+      }
+
+      &__title {
+        @include h2-mobile;
+        margin-bottom: 1rem;
+        width: 45vw;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include tablet {
+          overflow: visible;
+          text-overflow: clip;
+          width: auto;
+        }
+      }
+
+      &__channel {
+        @include h4-mobile;
+      }
+    }
+  }
+}

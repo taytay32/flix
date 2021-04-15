@@ -1,0 +1,27 @@
+@import "../../partials/variables";
+@import "../../partials/globals";
+@import "../../partials/mixins";
+
+.video-wrapper {
+  width: 100%;
+
+  @include tablet {
+    background-color: black;
+    @include flex-center;
+  }
+  .video-player {
+    height: 55vw;
+    width: 100%;
+    object-fit: cover;
+
+    @include tablet {
+      height: 52vw;
+      max-height: 54rem;
+      width: 91vw;
+    }
+
+    @include desktop {
+      max-width: 95rem;
+    }
+  }
+}

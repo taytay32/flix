@@ -1,0 +1,150 @@
+@import "../../partials/variables";
+@import "../../partials/globals";
+@import "../../partials/mixins";
+
+.entryCont {
+  width: 90vw;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 93vw;
+    max-width: 71.2rem;
+    margin-left: 3.125vw;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
+}
+
+.entry {
+  padding: 2rem 0;
+  display: flex;
+  border-bottom: 1px solid $tert-merc;
+
+  @include desktop {
+    width: auto;
+  }
+
+  &__img {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $sec-silver;
+    border-radius: 50%;
+  }
+
+  .entry-right {
+    width: 68vw;
+    margin: auto;
+
+    @include tablet {
+      width: 62rem;
+      margin: 0;
+      margin-left: 1.6rem;
+    }
+
+    @include desktop {
+      width: 60rem;
+    }
+  }
+
+  .entry-right-ch {
+    display: flex;
+    width: 100%;
+    padding-bottom: 0.5rem;
+
+    &__title {
+      @include comment-text;
+      font-weight: 500;
+    }
+
+    &__date {
+      margin-left: auto;
+      @include comment-text;
+      color: $sec-silver;
+
+      @include tablet {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .entry-right-ch-2 {
+    &__entry {
+      @include comment-text;
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.delete-like-cont {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+
+  .likewrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
+  }
+
+  .like-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    transition: 0.2s;
+    :hover {
+      opacity: 0.6;
+    }
+  }
+
+  .delete-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border: 0.5px solid rgb(228, 228, 228);
+    border-radius: 5px;
+    padding: 0.4rem;
+    transition: 0.2s;
+    background-color: white;
+  }
+
+  .delete-button:hover {
+    opacity: 0.6;
+    border: 2px solid slategray;
+  }
+
+  .delete-p {
+    @include comment-text;
+    font-size: 1.2rem;
+    color: $sec-silver;
+    margin-left: 0.5rem;
+  }
+
+  .like-button {
+    border: none;
+    background-color: white;
+  }
+
+  .delete-icon {
+    height: 100%;
+  }
+
+  .heart-icon {
+    height: 95%;
+  }
+
+  .likes {
+    @include comment-text;
+    font-size: 1.5rem;
+    color: $sec-silver;
+
+    margin-left: 0.5rem;
+  }
+}
